@@ -1,0 +1,159 @@
+.slide_container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;    
+
+}
+
+.slides {
+    width: 50em;
+    height: 20em;
+    transform: scale(1);
+	transition: transform ease-in-out 0.5s, opacity ease-in-out .5s;
+}
+
+#swipe:checked ~ .slide_container > .slides {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.elements_card {
+    background: rgb(204, 203, 203);
+    width: 28%;
+    height: 100%;
+	display: inline-block;
+	margin: 10px 15px 0 15px;
+	border-radius: 19px;
+	position: relative;
+    box-shadow: -1px 15px 30px -20px black;
+    
+}
+
+.elements_card:hover {
+    transition: background-color 0.5s;
+    background-color: rgb(231, 197, 197);
+}
+
+.elements_card_image {
+	position: relative;
+    height: 5%;
+    margin-top: 5%;
+	border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.elements_card_image img {
+    width: 115px;
+    height: 115px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+ 
+.elements_name {
+	font-size: 15px;
+    color: black;
+	font-weight: 700;
+    margin-top: 65%;
+}
+
+.elements_description {
+    padding: 10px;
+    height: 30%;  
+    top: 50%;
+}
+
+.check, .active_check {
+    transition: 0.5s ease-in-out;
+    position: relative;
+    color: white;
+    background-color: rgb(5, 112, 212);
+    height: 30px;
+    width: 80px;
+    border-radius: 20px;
+    top: -20%;
+}
+.check:hover {
+    transition: background-color 0.5s;
+    background-color: rgb(196, 9, 9);
+}
+
+.active_check {
+    background-color: rgb(196, 9, 9);
+}
+.active_check:hover {
+    transition: background-color 0.5s;
+    background-color: rgb(5, 112, 212);
+}
+
+.slider_control_prev {
+    left: -1%;
+    bottom: 40%;
+    position: relative; 
+}
+
+.slider_control_next {
+    right: -97%;
+    bottom: 47.5%;
+    position: relative; 
+}
+
+.slider_control {
+    transition: all 0.5s ease-in;
+    position: relative; 
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color:  rgb(5, 112, 212);
+    border-radius: 50%;    
+}
+
+.slider_control:hover {
+    transition: background-color 0.5s;
+    background-color: rgb(196, 9, 9);
+}
+
+.slider_control:before,
+.slider_control:after {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    width: 15px;
+    height: 2px;    
+    left: 0;
+}
+
+.slider_control_prev:before {
+    transform: rotate(45deg);
+    margin-top: 65%;
+    margin-left: 10%;
+}
+
+.slider_control_prev:after {
+    transform: rotate(-45deg);
+    margin-top: 25%;
+    margin-left: 10%;
+
+}
+
+.slider_control_next:before {
+    transform: rotate(-45deg);
+    margin-top: 65%;
+    margin-left: 30%;
+}
+
+.slider_control_next:after {
+    transform: rotate(45deg);
+    margin-top: 25%;
+    margin-left: 30%;
+}
+
+.slider_control:hover,
+.active_check:hover,
+.check:hover {
+    cursor: pointer;
+}

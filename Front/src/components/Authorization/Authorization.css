@@ -1,0 +1,22 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+input.authInput {
+    border-bottom: 1px solid #fff!important;
+    box-shadow: 0 1px 0 0 #fff!important;
+  }
+  
+  input.authInput + label {
+    color: #ffffff!important;
+  }
+  
+  input.authInput:focus + label {
+    color: rgb(184, 10, 10)!important;
+  }
+  
+  input.authInput:focus {
+    border-bottom: 1px solid rgb(184, 10, 10)!important;
+    box-shadow: 0 1px 0 0 rgb(184, 10, 10)!important;
+  }
+  .card {
+    margin-top: 30%;
+  }
